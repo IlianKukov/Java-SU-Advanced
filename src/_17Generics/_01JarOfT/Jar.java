@@ -1,4 +1,4 @@
-package _17Generics.JarOfT;
+package _17Generics._01JarOfT;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
