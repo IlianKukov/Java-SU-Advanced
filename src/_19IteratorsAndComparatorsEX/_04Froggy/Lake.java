@@ -16,27 +16,27 @@ public class Lake implements Iterable<Integer>{
         return null;
     }
 
-    private class Frog implements Iterator<Integer>{
-
-        private int totalCount;
-
-        private int getIndex(){
-
-
-        }
-        @Override
-        public boolean hasNext() {
-            return totalCount < numbers.length;
-        }
-
-        @Override
-        public Integer next() {
-            if (this.hasNext()){
-                return numbers[this.ge()];
-            }
-            throw new NoSuchElementException();
-        }
-    }
+//    private class Frog implements Iterator<Integer>{
+//
+//        private int totalCount;
+//
+//        private int getIndex(){
+//
+//
+//        }
+//        @Override
+//        public boolean hasNext() {
+//            return totalCount < numbers.length;
+//        }
+//
+//        @Override
+//        public Integer next() {
+//            if (this.hasNext()){
+//                return numbers[];
+//            }
+//            throw new NoSuchElementException();
+//        }
+//    }
 
 
 }
