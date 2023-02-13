@@ -54,11 +54,24 @@ public class _01PastryShop {
            System.out.println("What a pity! You didn't have enough materials to cook everything.");
        }
 
-        System.out.print("Liquids left");
+        System.out.print("Liquids left: ");
        if (liquids.isEmpty()){
-           System.out.print();
+           System.out.println("none");
+       }else {
+           System.out.println(liquids.toString().replaceAll("[\\[\\]]",""));
        }
 
+        System.out.print("Ingredients left: ");
+        if (ingredients.isEmpty()){
+            System.out.println("none");
+        }else {
+            System.out.println(ingredients.toString().replaceAll("[\\[\\]]",""));
+        }
+
+        System.out.println("Biscuit: " + biscuitCount);
+        System.out.println("Cake: " + cakeCount);
+        System.out.println("Pie: " + pieCount);
+        System.out.println("Pastry: " + pastryCount);
 
 
 
