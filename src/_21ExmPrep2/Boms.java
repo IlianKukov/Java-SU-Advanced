@@ -1,4 +1,4 @@
-package _21ExmPrepEX;
+package _21ExmPrep2;
 
 import java.util.Scanner;
 

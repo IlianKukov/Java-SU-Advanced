@@ -1,4 +1,4 @@
-package _20ExamPrep;
+package _20ExamPrep1;
 
 import java.util.Scanner;
 
