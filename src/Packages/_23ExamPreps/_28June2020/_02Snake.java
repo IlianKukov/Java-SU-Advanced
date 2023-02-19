@@ -1,4 +1,4 @@
-package Packages._20ExamPrep1;
+package Packages._23ExamPreps._28June2020;
 
 import java.util.Scanner;
 
@@ -7,12 +7,9 @@ public class _02Snake {
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
-
         int snakeCol=-1, snakeRow=-1;
-
         int lairStartRow=-1, lairStartCol=-1,
             lairEndRow=-1, lairEndCol=-1;
-
         char[][] board = new char[n][];
 
         for (int row = 0; row <n ; row++) {
@@ -31,7 +28,7 @@ public class _02Snake {
                         lairStartCol = col;
                     } else {
                         lairEndRow = row;
-                        lairEndCol = col;
+                        lairStartCol = col;
                     }
                 }
             }
@@ -40,27 +37,7 @@ public class _02Snake {
 
         boolean outBoard = false;
         int food = 0;
-        while (!outBoard){
-            if (board[snakeRow][snakeCol]=='*'){
-                food++;
-                board[snakeRow][snakeCol]='.';
-            } else if (board[snakeRow][snakeCol]=='B') {
-                board[snakeRow][snakeCol]='.';
-                snakeRow=lairEndRow;
-                snakeCol=lairEndCol;
-                board[snakeRow][snakeCol]='S';
-                continue;
-            }else if (board[snakeRow][snakeCol]=='S'){
-                board[snakeRow][snakeCol]='.';
-            }else {
-                board[snakeRow][snakeCol]='.';
-            }
-
-            if (food==10){
-                board[snakeRow][snakeCol]='S';
-                break;
-            }
-
+        while (food<10 && !outBoard){
             String command = scanner.nextLine();
 
             switch (command){
@@ -73,7 +50,10 @@ public class _02Snake {
                 case "right": snakeCol++;
                     break;
             }
+            if (board[snakeRow][snakeCol]=='*'){
+                food++;
 
+            }
 
             if (snakeCol<0 || snakeCol >=n ||
             snakeRow<0 || snakeRow>=n){
@@ -82,26 +62,16 @@ public class _02Snake {
             }
 
 
-
         }
 
         if (outBoard){
-            System.out.println("Game over!");
+            System.out.printf("Game over!");
         } else if (food>=10) {
             System.out.println("You won! You fed the snake.");
         }
 
         System.out.println("Food eaten: " + food);
-        printer(board);
 
-    }
-    private static void printer(char[][] board){
 
-        for (int i = 0; i<board.length; i++) {
-            for (int j = 0; j<board[i].length; j++) {
-                System.out.print(board[i][j]);
-            }
-            System.out.println();
-        }
     }
 }

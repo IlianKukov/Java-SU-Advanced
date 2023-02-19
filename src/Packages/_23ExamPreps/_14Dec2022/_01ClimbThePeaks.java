@@ -6,7 +6,7 @@ public class _01ClimbThePeaks {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-         ArrayList<String> claimed = new ArrayList<>();
+        ArrayList<String> claimed = new ArrayList<>();
 
         Deque<Integer> foods = new ArrayDeque<>();
         Deque<Integer> staminas = new ArrayDeque<>();
