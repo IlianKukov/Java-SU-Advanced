@@ -24,7 +24,7 @@ public class CommandParser {
         // TODO:....
         switch (animalParameters[0]){
             case"Cat":
-                animals.add(Cat);
+                //animals.add(Cat);
                 break;
             default:
                 throw new IllegalStateException("Unknown Animal " + animalParameters[0]);
